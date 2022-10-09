@@ -1,0 +1,9 @@
+<div class="mx-md-5 mx-3">
+    <div *ngFor="let post of posts" class="article-preview">
+        <a class="preview-link" [routerLink] = "post.id">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.description }}</p>
+        <span>Read more...</span>
+        </a>
+    </div>
+</div>

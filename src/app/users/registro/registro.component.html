@@ -1,0 +1,39 @@
+<div class="displayTable my-lg-5">
+    <div class="displayTableCell w-75">
+      <div class="authBlock">
+        <h3 class="my-5">Registro</h3>
+        <div class="formGroup">
+          <input
+            type="email"
+            class="formControl"
+            placeholder="Correo"
+            #userEmail
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="password"
+            class="formControl"
+            placeholder="Contraseña"
+            #userPwd
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="button"
+            class="btn btn-primary mb-5"
+            value="Registrarse"
+            (click)="authService.SignUp(userEmail.value, userPwd.value)"
+          />
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span
+          >¿Ya tienes una cuenta?
+          <a class="redirect" routerLink="/sign-in">¡Ingresa!</a></span
+        >
+      </div>
+    </div>
+  </div>
